@@ -37,7 +37,7 @@ void setup() {
 
 void loop() {
   lightReading = analogRead(lightpin);
-  if (lightReading < 200) { // light threshold. Default to 200, 700 for testing
+  if (lightReading < 100) { // light threshold. Default to 200, 700 for testing
     isDark = true;
   } else {
     isDark = false;
