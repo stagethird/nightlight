@@ -32,7 +32,7 @@ void setup() {
   for (int pinNumber = 2; pinNumber < 12; pinNumber++) {
     digitalWrite(pinNumber, LOW);
   }  
-  Serial.begin(9600);
+  // Serial.begin(9600);
 }
 
 void loop() {
@@ -48,6 +48,14 @@ void loop() {
   } else {
     hasMotion = false;
   }
+
+// 3 lines below are for testing. Remark out when done.
+// Sept 23, 2023
+  
+  // Serial.print("Light: "); Serial.print(lightReading);
+  // Serial.print("  Motion: "); Serial.print(motionReading);
+  // Serial.println();
+  
   if (isDark == true && hasMotion == true) {
     groupOneOn = lightsOn(LED1, LED2, 20);
     groupTwoOn = lightsOn(LED3, LED4, 20);
